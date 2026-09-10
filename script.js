@@ -1,5 +1,4 @@
-
-function continuar() {
+function continuarCadastro() {
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
@@ -10,5 +9,6 @@ function continuar() {
     }
 
     alert("Cadastro aparentemente concluído com sucesso... ou não.");
-    window.location.href = "final.html";
+
+    window.location.href = "senha.html";
 }
