@@ -28,10 +28,5 @@ def final():
     return render_template("final.html")
 
 
-@app.route("/sem-confirmar")
-def sem_confirmar():
-    return render_template("erro404.html"), 404
-
-
 if __name__ == "__main__":
     app.run(debug=True)
