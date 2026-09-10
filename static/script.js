@@ -5,13 +5,11 @@ function continuarCadastro() {
     const senha = document.getElementById("senha").value;
 
     if (nome === "" || email === "" || senha === "") {
-
         alert("Erro! Talvez esteja tudo certo, mas alguns campos parecem estar vazios.");
-
         return;
     }
 
     alert("Cadastro aparentemente concluído com sucesso... ou não.");
 
-    window.location.href = "senha.html";
+    window.location.href = "/senha";
 }

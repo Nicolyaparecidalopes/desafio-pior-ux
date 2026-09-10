@@ -18,6 +18,11 @@ def confirmacao():
     return render_template("confirmacao.html")
 
 
+@app.route("/sem-confirmar")
+def sem_confirmar():
+    return render_template("erro404.html"), 404
+
+
 @app.route("/final")
 def final():
     return render_template("final.html")
