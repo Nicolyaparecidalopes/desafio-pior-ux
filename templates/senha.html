@@ -1,70 +1,75 @@
-html
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Senha Fácil</title>
+```
+<title>Senha Fácil</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+```
+
 </head>
 
 <body>
 
-    <h1>Crie sua senha</h1>
+```
+<h1>Crie sua senha</h1>
 
-    <p>É muito simples. Basta seguir todas as regras.</p>
+<p>É muito simples. Basta seguir todas as regras.</p>
 
-    <form onsubmit="verificarSenha(event)">
+<form onsubmit="verificarSenha(event)">
 
-        <label for="senhaNova">Digite sua senha:</label>
-        <input type="password" id="senhaNova">
+    <label for="senhaNova">Digite sua senha:</label>
+    <input type="password" id="senhaNova">
 
-        <p>Regras obrigatórias:</p>
+    <p>Regras obrigatórias:</p>
 
-        <ul>
-            <li>A senha deve ter pelo menos 8 caracteres.</li>
-            <li>A senha deve ter exatamente 8 caracteres.</li>
-            <li>A senha precisa ter uma letra.</li>
-            <li>A senha não pode ter letras.</li>
-            <li>A senha precisa ser fácil de lembrar.</li>
-            <li>A senha não pode ser uma senha fácil.</li>
-        </ul>
+    <ul>
+        <li>A senha deve ter pelo menos 8 caracteres.</li>
+        <li>A senha deve ter exatamente 8 caracteres.</li>
+        <li>A senha precisa ter uma letra.</li>
+        <li>A senha não pode ter letras.</li>
+        <li>A senha precisa ser fácil de lembrar.</li>
+        <li>A senha não pode ser uma senha fácil.</li>
+    </ul>
 
-        <button type="button" onclick="history.back()">
-            VOLTAR
-        </button>
+    <button type="button" onclick="history.back()">
+        VOLTAR
+    </button>
 
-        <button type="submit">
-            CONTINUAR?
-        </button>
+    <button type="submit">
+        CONTINUAR?
+    </button>
 
-    </form>
+</form>
 
-    <script>
-        function verificarSenha(event) {
+<script>
+    function verificarSenha(event) {
 
-            event.preventDefault();
+        event.preventDefault();
 
-            const senha = document.getElementById("senhaNova").value;
+        const senha = document.getElementById("senhaNova").value;
 
-            if (senha === "") {
-                alert("Erro! Você não digitou nada. Ou talvez tenha digitado.");
-                return;
-            }
-
-            if (senha.length < 8) {
-                alert("Senha muito curta! Tente novamente.");
-                return;
-            }
-
-            alert("Senha aceita! Não sabemos exatamente como, mas vamos continuar.");
-
-            window.location.href = "/confirmacao";
+        if (senha === "") {
+            alert("Erro! Você não digitou nada. Ou talvez tenha digitado.");
+            return;
         }
-    </script>
+
+        if (senha.length < 8) {
+            alert("Senha muito curta! Tente novamente.");
+            return;
+        }
+
+        alert("Senha aceita! Não sabemos exatamente como, mas vamos continuar.");
+
+        window.location.href = "/confirmacao";
+    }
+</script>
+```
 
 </body>
 
