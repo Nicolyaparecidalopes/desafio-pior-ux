@@ -1,14 +1,16 @@
-
-html
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Confirmação</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <h1>Confirmação final</h1>
@@ -19,6 +21,8 @@ html
 
     <br>
 
+    <!-- Botões propositalmente confusos -->
+
     <button onclick="nao()">NÃO</button>
 
     <button onclick="talvez()">TALVEZ NÃO</button>
@@ -27,22 +31,31 @@ html
 
     <button onclick="continuar()">CONTINUAR SEM CONFIRMAR</button>
 
+
     <script>
 
+        // Botão que não permite continuar
         function nao() {
             alert("Você escolheu não continuar. Mas talvez devesse continuar.");
         }
 
+
+        // Botão com mensagem confusa
         function talvez() {
             alert("Resposta considerada inadequada. Tente novamente.");
         }
 
+
+        // Botões que permitem finalizar o cadastro
         function continuar() {
             alert("Você tem certeza? Enfim... vamos continuar.");
+
             window.location.href = "final.html";
         }
 
     </script>
 
 </body>
+
 </html>
+```
