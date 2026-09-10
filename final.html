@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parabéns</title>
 
-    <link rel="stylesheet" href="style.css">
+    <title>Parabéns!</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
-    <h1>🎉 PARABÉNS! 🎉</h1>
+    <h1>PARABÉNS!!! 🎉</h1>
 
     <p>
-        Você conseguiu chegar ao final
-        da pior experiência de usuário possível!
+        Você conseguiu chegar ao final da pior experiência de usuário!
     </p>
 
     <p>
-        Você enfrentou botões confusos,
-        regras estranhas e mensagens sem sentido.
+        Foram necessários vários cliques, decisões confusas
+        e muita paciência.
     </p>
 
-    <p>
-        Agora você entende por que uma boa
-        UI e UX são importantes.
-    </p>
-
-    <br>
-
-    <button onclick="window.location.href='index.html'">
+    <button onclick="voltarInicio()">
         VOLTAR AO INÍCIO
     </button>
 
+    <script>
+        function voltarInicio() {
+            window.location.href = "/";
+        }
+    </script>
+
 </body>
+
 </html>
 
