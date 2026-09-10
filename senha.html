@@ -1,0 +1,56 @@
+html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Senha</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Crie sua senha</h1>
+
+    <p>Para continuar, crie uma senha simples.</p>
+
+    <form onsubmit="verificarSenha(event)">
+
+        <label>Senha:</label><br>
+        <input type="password" id="senha"><br><br>
+
+        <p>
+            Regras da senha:
+        </p>
+
+        <ul>
+            <li>Deve possuir pelo menos 8 caracteres.</li>
+            <li>Deve possuir exatamente 8 caracteres.</li>
+            <li>Deve possuir uma letra.</li>
+            <li>Não pode possuir letras.</li>
+        </ul>
+
+        <button type="button" onclick="history.back()">VOLTAR</button>
+
+        <button type="submit">CONTINUAR?</button>
+
+    </form>
+
+    <script>
+        function verificarSenha(event) {
+            event.preventDefault();
+
+            const senha = document.getElementById("senha").value;
+
+            if (senha.length < 8) {
+                alert("Erro! A senha é curta demais.");
+                return;
+            }
+
+            alert("Senha aceita! Talvez.");
+            window.location.href = "confirmacao.html";
+        }
+    </script>
+
+</body>
+</html>
