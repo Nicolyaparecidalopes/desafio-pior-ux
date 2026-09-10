@@ -1,56 +1,71 @@
 html
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criação de Senha</title>
+
+    <title>Senha Fácil</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <h1>Crie sua senha</h1>
 
-    <p>Para continuar, crie uma senha simples.</p>
+    <p>É muito simples. Basta seguir todas as regras.</p>
 
     <form onsubmit="verificarSenha(event)">
 
-        <label>Senha:</label><br>
-        <input type="password" id="senha"><br><br>
+        <label for="senhaNova">Digite sua senha:</label>
+        <input type="password" id="senhaNova">
 
-        <p>
-            Regras da senha:
-        </p>
+        <p>Regras obrigatórias:</p>
 
         <ul>
-            <li>Deve possuir pelo menos 8 caracteres.</li>
-            <li>Deve possuir exatamente 8 caracteres.</li>
-            <li>Deve possuir uma letra.</li>
-            <li>Não pode possuir letras.</li>
+            <li>A senha deve ter pelo menos 8 caracteres.</li>
+            <li>A senha deve ter exatamente 8 caracteres.</li>
+            <li>A senha precisa ter uma letra.</li>
+            <li>A senha não pode ter letras.</li>
+            <li>A senha precisa ser fácil de lembrar.</li>
+            <li>A senha não pode ser uma senha fácil.</li>
         </ul>
 
-        <button type="button" onclick="history.back()">VOLTAR</button>
+        <button type="button" onclick="history.back()">
+            VOLTAR
+        </button>
 
-        <button type="submit">CONTINUAR?</button>
+        <button type="submit">
+            CONTINUAR?
+        </button>
 
     </form>
 
     <script>
         function verificarSenha(event) {
+
             event.preventDefault();
 
-            const senha = document.getElementById("senha").value;
+            const senha = document.getElementById("senhaNova").value;
 
-            if (senha.length < 8) {
-                alert("Erro! A senha é curta demais.");
+            if (senha === "") {
+                alert("Erro! Você não digitou nada. Ou talvez tenha digitado.");
                 return;
             }
 
-            alert("Senha aceita! Talvez.");
+            if (senha.length < 8) {
+                alert("Senha muito curta! Tente novamente.");
+                return;
+            }
+
+            alert("Senha aceita! Não sabemos exatamente como, mas vamos continuar.");
+
             window.location.href = "confirmacao.html";
         }
     </script>
 
 </body>
+
 </html>
